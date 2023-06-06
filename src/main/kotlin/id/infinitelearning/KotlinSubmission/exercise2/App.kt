@@ -8,7 +8,15 @@ fun main() {
     Optional:
     - Agar lebih mudah, gunakanlah for loop dan logika if untuk mengisi bilangan genap pada list
      */
-    // Buat di bawah sini
+    val genap = mutableListOf<Int>()
+    for (i in 1..100){
+        if (i % 2 == 0){
+            genap.add(i)
+        }
+    }
+
+    println("=====Latihan 1 List=====")
+    println(genap)
 
 
     /** Latihan 2 Map
@@ -26,6 +34,29 @@ fun main() {
     Cetak nama bulan sekarang dan bulan lahir kamu dengan format string berikut:
     - "It's {$monthNow} now, I was born in {$birthMonth}"
      */
-    // Buat di bawah sini
 
+    val month = mapOf(
+        "Jan" to "January",
+        "Feb" to "February",
+        "Mar" to "March",
+        "Apr" to "April",
+        "May" to "May",
+        "Jun" to "June",
+        "Jul" to "July",
+        "Aug" to "August",
+        "Sep" to "September",
+        "Oct" to "October",
+        "Nov" to "November",
+        "Dec" to "December"
+    )
+
+    println()
+    println("=====Latihan 2 Map=====")
+    month.forEach{(key, value) ->
+        println("$key -> $value")
+    }
+
+    val monthNow = "June"
+    val birthMonth = "July"
+    println("It's {$monthNow} now, I was born in {$birthMonth}")
 }

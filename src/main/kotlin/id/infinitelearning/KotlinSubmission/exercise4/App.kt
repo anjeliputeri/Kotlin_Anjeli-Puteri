@@ -7,6 +7,18 @@ fun main() {
      *
      */
 
+    try {
+        print("Masukkan NIM anda: ")
+        val input = readLine()
+        val nim = input?.toInt()
 
+        if (nim != null){
+            println("NIM anda: $nim")
+        } else {
+            throw NumberFormatException("Input tidak valid")
+        }
+    } catch (e: NumberFormatException) {
+        println("Terjadi kesalahan: ${e.message}")
+    }
 
 }

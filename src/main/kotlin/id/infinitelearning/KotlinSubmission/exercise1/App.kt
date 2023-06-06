@@ -10,7 +10,16 @@ Lengkapi fungsi myProfile di bawah ini dengan membuat variabel dengan ketentuan 
 - Dan cetak setiap variabel ke layar saat fungsi myProfile() di panggil
  */
 fun myProfile() {
+    val namaDepan: String = "Anjeli"
+    val namaBlkg: String = "Puteri"
+    val umur: Int = 20
+    val single: Boolean = true
 
+    println("=====myProfile=====")
+    println("Nama depan: $namaDepan")
+    println("Nama belakang: $namaBlkg")
+    println("Umur: $umur tahun")
+    println("Saya single: $single hehehe")
 }
 
 
@@ -20,6 +29,11 @@ fun myProfile() {
  */
 fun groupDetail(groupId: Int, groupMember: List<Any>, session: String): Any {
 
+    println()
+    println("=====groupDetail=====")
+    println("groupId: $groupId")
+    println("groupMember: $groupMember")
+    println("session: $session")
 
     return arrayOf(groupId, groupMember, session)
 }
@@ -32,7 +46,11 @@ fun groupDetail(groupId: Int, groupMember: List<Any>, session: String): Any {
  */
 fun myGroup(): String {
 
-    return ""
+    var anggota = listOf<String>("anjeli", "zacky", "rasyid", "lutfia", "niken", "rania")
+
+    println()
+    println("=====myGroup=====")
+    return anggota[0]
 }
 
 /**
@@ -45,14 +63,17 @@ fun myGroup(): String {
 fun totalMember(): Int {
     val mentor = arrayOf("Dian", "Shasa", "Hasan", "Reza")
     val countOfGroup = 5
+    val total = mentor.size + countOfGroup
 
-    return 0
+    return total
 
 }
 
 fun main() {
 
     myProfile()
+
+    groupDetail(5, listOf("anjeli", "inara"), "morning")
 
     val myGroup = myGroup()
     println("My Group is: $myGroup")
@@ -65,6 +86,6 @@ fun main() {
      *  Ubah nilai argumen-argumen dari fungsi groupDetail di bawah ini sesuai dengan data group kamu
      *
      */
-    groupDetail(1, listOf("Anggota 1", "Anggota 2", "..."), "Morning")
-
+    println()
+    groupDetail(5, listOf("Anjeli", "Zacky", "Niken", "Rania", "Rasyid", "Lutfia"), "Morning")
 }
